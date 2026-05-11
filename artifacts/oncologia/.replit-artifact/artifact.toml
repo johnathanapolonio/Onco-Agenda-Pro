@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Cirurgia Oncológica"
+version = "1.0.0"
+id = "artifacts/oncologia"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23581
+
+[services.development]
+run = "pnpm --filter @workspace/oncologia run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/oncologia", "run", "build" ]
+publicDir = "artifacts/oncologia/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23581"
+BASE_PATH = "/"

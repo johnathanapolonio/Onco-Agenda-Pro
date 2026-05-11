@@ -1,0 +1,20 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "V1-LYXPDEfWEr5jVrH_NV"
+uri = "file://artifacts/oncologia/public/images/hero.png"
+type = "image"
+title = "Warm sunlit consultation room"
+
+[[generated]]
+id = "n-H_OJC9p34OlTBqSj1ST"
+uri = "file://artifacts/oncologia/public/images/doctor.png"
+type = "image"
+title = "Warm oncological surgeon portrait"
+
+[[generated]]
+id = "WhhT441562G5u7uRvW6fd"
+uri = "file://artifacts/oncologia/public/images/clinic.png"
+type = "image"
+title = "Welcoming clinic waiting area"

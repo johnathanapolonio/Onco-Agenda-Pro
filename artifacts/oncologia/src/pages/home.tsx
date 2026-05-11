@@ -1,0 +1,245 @@
+import { Helmet } from "react-helmet-async";
+import { Layout } from "@/components/layout";
+import { Link } from "wouter";
+import { motion } from "framer-motion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Card, CardContent } from "@/components/ui/card";
+
+export default function Home() {
+  return (
+    <Layout>
+      <Helmet>
+        <title>Cirurgião Oncológico Campo Largo | Dr. Silva | Paraná</title>
+        <meta name="description" content="Clínica especializada em cirurgia oncológica em Campo Largo, Paraná. Tratamento humanizado, técnica avançada e acolhimento para pacientes oncológicos." />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative w-full bg-background overflow-hidden">
+        <div className="container px-4 md:px-8 py-20 md:py-32 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+          <div className="flex-1 space-y-8 z-10">
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.1]"
+            >
+              Cuidado humanizado e técnica avançada em Cirurgia Oncológica
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-lg md:text-xl text-muted-foreground max-w-[600px] leading-relaxed"
+            >
+              Em Campo Largo, Paraná. Um espaço onde a expertise cirúrgica encontra o acolhimento profundo. Estamos aqui para guiar você com segurança e confiança.
+            </motion.p>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="flex flex-col sm:flex-row gap-4"
+            >
+              <Link href="/agendar" className="inline-flex h-12 items-center justify-center rounded-md bg-primary px-8 text-base font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
+                Agende sua Consulta
+              </Link>
+              <Link href="/chat" className="inline-flex h-12 items-center justify-center rounded-md border border-input bg-background px-8 text-base font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
+                Tirar Dúvidas com I.A.
+              </Link>
+            </motion.div>
+          </div>
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex-1 relative w-full max-w-md md:max-w-none aspect-[4/3] md:aspect-square overflow-hidden rounded-2xl shadow-xl"
+          >
+            <img 
+              src="/images/hero.png" 
+              alt="Consultório médico iluminado e acolhedor" 
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="w-full py-20 bg-secondary/30">
+        <div className="container px-4 md:px-8 max-w-7xl mx-auto flex flex-col md:flex-row-reverse items-center gap-12">
+          <div className="flex-1 space-y-6">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground">Sobre o Cirurgião</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Com extensa formação e dedicação exclusiva ao tratamento cirúrgico do câncer, oferecemos uma abordagem que enxerga o paciente por inteiro, não apenas a doença. 
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Nossa missão é proporcionar não apenas a excelência técnica exigida pela oncologia moderna, mas também o suporte emocional fundamental para enfrentar este momento.
+            </p>
+          </div>
+          <div className="flex-1 w-full max-w-md md:max-w-sm aspect-[3/4] overflow-hidden rounded-2xl shadow-lg relative">
+            <img 
+              src="/images/doctor.png" 
+              alt="Retrato do cirurgião oncológico" 
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Specialties */}
+      <section className="w-full py-20 bg-background">
+        <div className="container px-4 md:px-8 max-w-7xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold">Especialidades Cirúrgicas</h2>
+            <p className="text-muted-foreground text-lg">Áreas de atuação com foco na remoção segura e precisa de tumores.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { title: "Cirurgia do Aparelho Digestivo", desc: "Tratamento cirúrgico de tumores de estômago, cólon, reto, fígado, pâncreas e vias biliares." },
+              { title: "Cirurgia de Pele e Partes Moles", desc: "Abordagem para melanomas e sarcomas com margens seguras e reconstrução adequada." },
+              { title: "Cirurgia Ginecológica Oncológica", desc: "Tratamento cirúrgico para câncer de ovário, útero e colo uterino." }
+            ].map((spec, i) => (
+              <Card key={i} className="bg-card border-none shadow-sm hover:shadow-md transition-shadow">
+                <CardContent className="p-8 space-y-4">
+                  <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-serif text-2xl font-bold">
+                    {i + 1}
+                  </div>
+                  <h3 className="text-xl font-bold font-serif">{spec.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{spec.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Warning Signs */}
+      <section className="w-full py-20 bg-primary/5 border-y border-border">
+        <div className="container px-4 md:px-8 max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center">
+          <div className="flex-1 space-y-6">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary">Sinais de alerta que merecem atenção</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              A detecção precoce é um dos fatores mais importantes para o sucesso do tratamento oncológico. Fique atento ao seu corpo e procure avaliação médica se notar:
+            </p>
+            <ul className="space-y-4 mt-6">
+              {[
+                "Nódulos ou caroços pelo corpo",
+                "Perda de peso inexplicável e fadiga extrema",
+                "Mudanças no funcionamento do intestino ou bexiga",
+                "Feridas que não cicatrizam",
+                "Sangramentos ou secreções anormais"
+              ].map((sign, idx) => (
+                <li key={idx} className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="text-sm font-bold">!</span>
+                  </div>
+                  <span className="text-foreground font-medium">{sign}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="flex-1 w-full max-w-md aspect-video md:aspect-square overflow-hidden rounded-2xl shadow-lg relative">
+            <img 
+              src="/images/clinic.png" 
+              alt="Área de espera acolhedora da clínica" 
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Location */}
+      <section className="w-full py-20 bg-background">
+        <div className="container px-4 md:px-8 max-w-7xl mx-auto text-center space-y-8">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold">Por que Campo Largo?</h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Campo Largo é referência em saúde na região metropolitana de Curitiba, oferecendo hospitais bem equipados e infraestrutura completa para procedimentos complexos. Nossa clínica proporciona aos pacientes de todo o Paraná um ambiente mais tranquilo que o dos grandes centros, sem abrir mão da tecnologia de ponta necessária para a cirurgia oncológica de excelência.
+          </p>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="w-full py-20 bg-secondary/30">
+        <div className="container px-4 md:px-8 max-w-7xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold">Depoimentos</h2>
+            <p className="text-muted-foreground text-lg">Histórias de quem confiou em nosso cuidado.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                text: "O diagnóstico foi assustador, mas desde a primeira consulta senti que estava no lugar certo. A segurança e a clareza do doutor me deram a paz necessária para a cirurgia.",
+                name: "Maria T.",
+                city: "Campo Largo, PR"
+              },
+              {
+                text: "Profissionalismo impecável e um lado humano raro de se encontrar. Toda a equipe nos tratou com muito carinho.",
+                name: "João C.",
+                city: "Curitiba, PR"
+              },
+              {
+                text: "A estrutura da clínica é maravilhosa. O ambiente em nada lembra um hospital frio, o que ajudou muito no meu estado emocional antes da cirurgia.",
+                name: "Ana P.",
+                city: "Ponta Grossa, PR"
+              }
+            ].map((testimonial, i) => (
+              <Card key={i} className="bg-background border-none shadow-sm">
+                <CardContent className="p-8 space-y-6">
+                  <p className="text-muted-foreground italic leading-relaxed">"{testimonial.text}"</p>
+                  <div>
+                    <p className="font-bold text-foreground">{testimonial.name}</p>
+                    <p className="text-sm text-muted-foreground">{testimonial.city}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="w-full py-20 bg-secondary/30">
+        <div className="container px-4 md:px-8 max-w-3xl mx-auto">
+          <div className="text-center mb-12 space-y-4">
+            <h2 className="font-serif text-3xl font-bold">Dúvidas Frequentes</h2>
+            <p className="text-muted-foreground">Informações importantes sobre consultas e procedimentos.</p>
+          </div>
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="item-1">
+              <AccordionTrigger className="text-left font-medium">Como me preparar para a primeira consulta?</AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed">
+                Traga todos os seus exames recentes (laudos e imagens), relatórios de biópsias, lista de medicamentos em uso e um resumo do seu histórico médico. É recomendável vir acompanhado de um familiar de confiança.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger className="text-left font-medium">A clínica atende convênios?</AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed">
+                Atendemos de forma particular com fornecimento de nota fiscal para reembolso, além de alguns convênios selecionados. Entre em contato para verificar a cobertura do seu plano específico.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger className="text-left font-medium">Como funciona o agendamento de cirurgias?</AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed">
+                Após a indicação cirúrgica em consulta, nossa equipe auxilia em todo o processo burocrático, escolha do hospital parceiro (em Campo Largo ou Curitiba) e agendamento da data, além das orientações pré-operatórias detalhadas.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="w-full py-24 bg-primary text-primary-foreground">
+        <div className="container px-4 md:px-8 max-w-4xl mx-auto text-center space-y-8">
+          <h2 className="font-serif text-3xl md:text-5xl font-bold">Estamos aqui para apoiar você.</h2>
+          <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto">
+            Dar o primeiro passo para o tratamento pode ser difícil, mas você não precisa caminhar sozinho.
+          </p>
+          <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/agendar" className="inline-flex h-12 items-center justify-center rounded-md bg-background px-8 text-base font-medium text-primary shadow transition-colors hover:bg-background/90">
+              Agendar Consulta
+            </Link>
+          </div>
+        </div>
+      </section>
+
+    </Layout>
+  );
+}
