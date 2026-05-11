@@ -80,12 +80,26 @@ export default function Home() {
             <p className="text-lg text-muted-foreground leading-relaxed">
               Sua missão é proporcionar não apenas a excelência técnica exigida pela oncologia moderna, mas também o suporte humano fundamental para enfrentar este momento com segurança e confiança.
             </p>
+            <div className="pt-2 space-y-3">
+              <p className="text-sm font-semibold text-foreground uppercase tracking-widest">Formação</p>
+              <div className="flex items-start gap-3">
+                <div className="mt-1 w-2 h-2 rounded-full bg-primary shrink-0" />
+                <p className="text-muted-foreground text-sm leading-relaxed">Medicina — Pontifícia Universidade Católica do Paraná (PUCPR)</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="mt-1 w-2 h-2 rounded-full bg-primary shrink-0" />
+                <p className="text-muted-foreground text-sm leading-relaxed">Residência Médica em Cirurgia Oncológica — Hospital do Rocio, Campo Largo, PR</p>
+              </div>
+            </div>
           </div>
           <div className="flex-1 w-full max-w-md md:max-w-sm aspect-[3/4] overflow-hidden rounded-2xl shadow-lg relative">
             <img 
-              src="/images/doctor.png" 
-              alt="Retrato do cirurgião oncológico" 
-              className="absolute inset-0 w-full h-full object-cover"
+              src="/images/dr-apolonio.png" 
+              alt="Dr. Johnathan Gabriel Rodrigues Apolonio — Cirurgião Oncológico" 
+              className="absolute inset-0 w-full h-full object-cover object-top"
+              loading="lazy"
+              width="400"
+              height="533"
             />
           </div>
         </div>
