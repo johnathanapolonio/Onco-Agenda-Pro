@@ -42,9 +42,6 @@ export default function Home() {
               <Link href="/agendar" className="inline-flex h-12 items-center justify-center rounded-md bg-primary px-8 text-base font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
                 Agende sua Consulta
               </Link>
-              <Link href="/chat" className="inline-flex h-12 items-center justify-center rounded-md border border-input bg-background px-8 text-base font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
-                Tirar Dúvidas com I.A.
-              </Link>
             </motion.div>
           </div>
           <motion.div 

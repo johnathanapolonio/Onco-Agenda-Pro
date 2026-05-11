@@ -6,7 +6,6 @@ import { HelmetProvider } from "react-helmet-async";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import Agendar from "@/pages/agendar";
-import Chat from "@/pages/chat";
 
 const queryClient = new QueryClient();
 
@@ -15,7 +14,6 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/agendar" component={Agendar} />
-      <Route path="/chat" component={Chat} />
       <Route component={NotFound} />
     </Switch>
   );
