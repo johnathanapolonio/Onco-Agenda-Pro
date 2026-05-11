@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <Layout>
       <Helmet>
-        <title>Cirurgião Oncológico Campo Largo | Dr. Silva | Paraná</title>
-        <meta name="description" content="Clínica especializada em cirurgia oncológica em Campo Largo, Paraná. Tratamento humanizado, técnica avançada e acolhimento para pacientes oncológicos." />
+        <title>Dr. Johnathan Apolonio | Cirurgião Oncológico | Campo Largo e Araucária, PR</title>
+        <meta name="description" content="Dr. Johnathan Gabriel Rodrigues Apolonio, cirurgião oncológico CRM-PR 41.248. Atendimento humanizado no Hospital do Rocio em Campo Largo e Clínica São Vicente em Araucária, Paraná." />
       </Helmet>
 
       {/* Hero Section */}
@@ -23,7 +23,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.1]"
             >
-              Cuidado humanizado e técnica avançada em Cirurgia Oncológica
+              Cuidado Humanizado em Cirurgia Oncológica
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -31,7 +31,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg md:text-xl text-muted-foreground max-w-[600px] leading-relaxed"
             >
-              Em Campo Largo, Paraná. Um espaço onde a expertise cirúrgica encontra o acolhimento profundo. Estamos aqui para guiar você com segurança e confiança.
+              Atendimento especializado no Hospital do Rocio em Campo Largo e na Clínica São Vicente em Araucária. Estamos aqui para guiar você com segurança e confiança.
             </motion.p>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -63,12 +63,13 @@ export default function Home() {
       <section className="w-full py-20 bg-secondary/30">
         <div className="container px-4 md:px-8 max-w-7xl mx-auto flex flex-col md:flex-row-reverse items-center gap-12">
           <div className="flex-1 space-y-6">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground">Sobre o Cirurgião</h2>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground">Dr. Johnathan Gabriel Rodrigues Apolonio</h2>
+            <p className="text-sm font-medium text-primary tracking-wide uppercase">CRM-PR 41.248 &nbsp;|&nbsp; RQE 39.480 — Cirurgia Oncológica</p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Com extensa formação e dedicação exclusiva ao tratamento cirúrgico do câncer, oferecemos uma abordagem que enxerga o paciente por inteiro, não apenas a doença. 
+              Com formação sólida e dedicação exclusiva ao tratamento cirúrgico do câncer, o Dr. Johnathan Apolonio adota uma abordagem que enxerga o paciente por inteiro — não apenas a doença.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Nossa missão é proporcionar não apenas a excelência técnica exigida pela oncologia moderna, mas também o suporte emocional fundamental para enfrentar este momento.
+              Sua missão é proporcionar não apenas a excelência técnica exigida pela oncologia moderna, mas também o suporte humano fundamental para enfrentar este momento com segurança e confiança.
             </p>
           </div>
           <div className="flex-1 w-full max-w-md md:max-w-sm aspect-[3/4] overflow-hidden rounded-2xl shadow-lg relative">
@@ -146,10 +147,21 @@ export default function Home() {
       {/* Location */}
       <section className="w-full py-20 bg-background">
         <div className="container px-4 md:px-8 max-w-7xl mx-auto text-center space-y-8">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold">Por que Campo Largo?</h2>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold">Locais de Atendimento</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Campo Largo é referência em saúde na região metropolitana de Curitiba, oferecendo hospitais bem equipados e infraestrutura completa para procedimentos complexos. Nossa clínica proporciona aos pacientes de todo o Paraná um ambiente mais tranquilo que o dos grandes centros, sem abrir mão da tecnologia de ponta necessária para a cirurgia oncológica de excelência.
+            O Dr. Johnathan Apolonio atende em dois hospitais de referência na região metropolitana de Curitiba, trazendo cuidado especializado mais próximo de você.
           </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto mt-4">
+            <div className="rounded-xl border border-border bg-card p-8 text-left space-y-2 shadow-sm">
+              <h3 className="font-bold text-lg font-serif text-foreground">Hospital do Rocio</h3>
+              <p className="text-muted-foreground text-sm">Campo Largo, Paraná</p>
+              <p className="text-primary font-medium text-sm">(41) 3136-2515</p>
+            </div>
+            <div className="rounded-xl border border-border bg-card p-8 text-left space-y-2 shadow-sm">
+              <h3 className="font-bold text-lg font-serif text-foreground">Clínica São Vicente</h3>
+              <p className="text-muted-foreground text-sm">Araucária, Paraná</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -215,7 +227,7 @@ export default function Home() {
             <AccordionItem value="item-3">
               <AccordionTrigger className="text-left font-medium">Como funciona o agendamento de cirurgias?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
-                Após a indicação cirúrgica em consulta, nossa equipe auxilia em todo o processo burocrático, escolha do hospital parceiro (em Campo Largo ou Curitiba) e agendamento da data, além das orientações pré-operatórias detalhadas.
+                Após a indicação cirúrgica em consulta, o Dr. Johnathan Apolonio auxilia em todo o processo, realizando os procedimentos no Hospital do Rocio em Campo Largo ou na Clínica São Vicente em Araucária, conforme a melhor indicação para cada caso.
               </AccordionContent>
             </AccordionItem>
           </Accordion>

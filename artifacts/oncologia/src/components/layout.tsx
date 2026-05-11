@@ -7,7 +7,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <div className="container flex h-16 items-center justify-between px-4 md:px-8 max-w-7xl mx-auto">
           <Link href="/" className="flex items-center gap-2">
             <div className="font-serif text-xl font-bold tracking-tight text-primary">
-              Dr. Silva
+              Dr. Apolonio
             </div>
             <span className="hidden md:inline-block text-sm text-muted-foreground border-l border-border pl-2 ml-2">
               Cirurgia Oncológica
@@ -25,17 +25,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <footer className="border-t border-border bg-secondary/30 mt-auto">
         <div className="container px-4 md:px-8 py-12 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <div className="font-serif text-lg font-bold text-primary mb-4">Dr. Silva</div>
+            <div className="font-serif text-lg font-bold text-primary mb-2">Dr. Johnathan Apolonio</div>
+            <p className="text-xs text-muted-foreground mb-3">CRM-PR 41.248 | RQE 39.480</p>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Cirurgia Oncológica em Campo Largo, Paraná. Tratamento humanizado e acolhimento em momentos de vulnerabilidade.
+              Cirurgia Oncológica com atendimento humanizado em Campo Largo e Araucária, Paraná.
             </p>
           </div>
           <div>
             <h3 className="font-medium mb-4">Contato</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>Rua Exemplo, 123 - Centro</li>
-              <li>Campo Largo, PR - 83601-000</li>
-              <li>(41) 99999-9999</li>
+              <li className="font-medium text-foreground">Hospital do Rocio — Campo Largo</li>
+              <li>(41) 3136-2515</li>
+              <li className="font-medium text-foreground mt-3">Clínica São Vicente — Araucária</li>
             </ul>
           </div>
           <div>
