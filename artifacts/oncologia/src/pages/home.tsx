@@ -14,47 +14,56 @@ export default function Home() {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative w-full bg-background overflow-hidden">
-        <div className="container px-4 md:px-8 py-20 md:py-32 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
-          <div className="flex-1 space-y-8 z-10">
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.1]"
-            >
-              Cuidado Humanizado em Cirurgia Oncológica
-            </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl text-muted-foreground max-w-[600px] leading-relaxed"
-            >
-              Atendimento especializado no Hospital do Rocio em Campo Largo e na Clínica São Vicente em Araucária. Estamos aqui para guiar você com segurança e confiança.
-            </motion.p>
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4"
-            >
-              <Link href="/agendar" className="inline-flex h-12 items-center justify-center rounded-md bg-primary px-8 text-base font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
-                Agende sua Consulta
-              </Link>
-            </motion.div>
-          </div>
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex-1 relative w-full max-w-md md:max-w-none aspect-[4/3] md:aspect-square overflow-hidden rounded-2xl shadow-xl"
+      <section className="relative w-full overflow-hidden" style={{ background: "linear-gradient(160deg, #fdf8f2 0%, #f5f0e8 40%, #eef5f2 100%)" }}>
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, #1a4a3c 0%, transparent 50%), radial-gradient(circle at 80% 20%, #2d6a5a 0%, transparent 40%)" }} />
+        <div className="container px-4 md:px-8 py-24 md:py-40 max-w-5xl mx-auto flex flex-col items-center text-center relative z-10 gap-10">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary text-sm font-medium tracking-wide"
           >
-            <img 
-              src="/images/hero.png" 
-              alt="Consultório médico iluminado e acolhedor" 
-              className="absolute inset-0 w-full h-full object-cover"
-            />
+            CRM-PR 41.248 &nbsp;·&nbsp; RQE 39.480 — Cirurgia Oncológica
+          </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="font-serif font-bold tracking-tight text-foreground leading-[1.05]"
+            style={{ fontSize: "clamp(2.8rem, 7vw, 5.5rem)", fontFamily: "'Playfair Display', Georgia, serif", fontStyle: "italic" }}
+          >
+            Cuidado Humanizado<br />
+            <span style={{ fontStyle: "normal" }}>em Cirurgia Oncológica</span>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.25 }}
+            className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed"
+          >
+            Atendimento especializado no Hospital do Rocio em Campo Largo e na Clínica São Vicente em Araucária. Estamos aqui para guiar você com segurança e confiança.
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex flex-col sm:flex-row gap-4 items-center"
+          >
+            <Link data-testid="button-agendar-hero" href="/agendar" className="inline-flex h-13 items-center justify-center rounded-md bg-primary px-10 py-3 text-base font-semibold text-primary-foreground shadow-lg transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
+              Agendar Consulta
+            </Link>
+            <a
+              href="https://wa.me/554135524000"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="button-whatsapp-hero"
+              className="inline-flex h-13 items-center justify-center gap-2 rounded-md border border-[#25D366] bg-[#25D366]/10 px-8 py-3 text-base font-semibold text-[#1a9e4a] transition-colors hover:bg-[#25D366]/20"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Fale pelo WhatsApp
+            </a>
           </motion.div>
         </div>
       </section>
@@ -175,19 +184,19 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                text: "O diagnóstico foi assustador, mas desde a primeira consulta senti que estava no lugar certo. A segurança e a clareza do doutor me deram a paz necessária para a cirurgia.",
-                name: "Maria T.",
-                city: "Campo Largo, PR"
+                text: "Médico muito dedicado, atencioso. Fui com medo de um diagnóstico e ele mostrou ser totalmente possível enfrentar essa terrível doença.",
+                name: "Solange",
+                city: "Araucária, PR"
               },
               {
-                text: "Profissionalismo impecável e um lado humano raro de se encontrar. Toda a equipe nos tratou com muito carinho.",
-                name: "João C.",
+                text: "Conheço o Dr. Johnathan desde a tenra idade. Sempre muito dedicado, extremamente honesto. Nunca o vi desistir diante de um desafio.",
+                name: "Paciente",
+                city: "Ivaiporã, PR"
+              },
+              {
+                text: "Tive meu pai tratado por este cirurgião. Hoje, se tenho meu pai vivo ainda, foi porque Deus permitiu e porque este abençoado médico o operou.",
+                name: "Familiar de paciente",
                 city: "Curitiba, PR"
-              },
-              {
-                text: "A estrutura da clínica é maravilhosa. O ambiente em nada lembra um hospital frio, o que ajudou muito no meu estado emocional antes da cirurgia.",
-                name: "Ana P.",
-                city: "Ponta Grossa, PR"
               }
             ].map((testimonial, i) => (
               <Card key={i} className="bg-background border-none shadow-sm">
