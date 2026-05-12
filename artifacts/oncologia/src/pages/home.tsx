@@ -80,21 +80,26 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.15 }}
                 className="leading-[1.1] text-white"
-                style={{ fontFamily: "'Great Vibes', cursive", fontSize: "clamp(3rem, 6vw, 5.5rem)", fontWeight: 400 }}
+                style={{
+                  fontFamily: "'Playfair Display', Georgia, serif",
+                  fontSize: "clamp(2.8rem, 5.5vw, 5rem)",
+                  fontWeight: 800,
+                  letterSpacing: "-0.01em",
+                  lineHeight: 1.05,
+                }}
               >
-                Cuidado Humanizado
+                Cirurgia Oncológica
                 <span
-                  className="block mt-1"
+                  className="block mt-3"
                   style={{
-                    fontFamily: "'Cormorant Garamond', Georgia, serif",
-                    fontStyle: "italic",
-                    fontWeight: 300,
-                    fontSize: "clamp(1.5rem, 3vw, 2.6rem)",
-                    color: "rgba(255,255,255,0.75)",
-                    letterSpacing: "0.02em",
+                    fontFamily: "'Great Vibes', cursive",
+                    fontWeight: 400,
+                    fontSize: "clamp(1.8rem, 3.5vw, 3rem)",
+                    color: "rgba(255,255,255,0.65)",
+                    letterSpacing: "0.01em",
                   }}
                 >
-                  em Cirurgia Oncológica
+                  com Cuidado Humanizado
                 </span>
               </motion.h1>
 
@@ -208,7 +213,7 @@ export default function Home() {
           </div>
           <div className="flex-1 w-full max-w-md md:max-w-sm aspect-[3/4] overflow-hidden rounded-2xl shadow-lg relative">
             <img 
-              src="/images/dr-apolonio.png" 
+              src="/images/dr-apolonio-cirurgia.png" 
               alt="Dr. Johnathan Gabriel Rodrigues Apolonio — Cirurgião Oncológico" 
               className="absolute inset-0 w-full h-full object-cover object-top"
               loading="lazy"
