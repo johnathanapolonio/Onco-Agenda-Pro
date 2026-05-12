@@ -3,19 +3,24 @@ import { Link } from "wouter";
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col font-sans bg-background text-foreground">
-      <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <header className="sticky top-0 z-50 w-full" style={{ background: "rgba(10,15,13,0.88)", backdropFilter: "blur(16px)", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
         <div className="container flex h-16 items-center justify-between px-4 md:px-8 max-w-7xl mx-auto">
           <Link href="/" className="flex items-center gap-2">
-            <div className="font-serif text-base md:text-lg font-bold tracking-tight text-primary leading-tight">
+            <div className="font-serif text-base md:text-lg font-bold tracking-tight leading-tight" style={{ color: "#e8d5a8" }}>
               Dr. Johnathan Gabriel Rodrigues Apolonio
             </div>
-            <span className="hidden lg:inline-block text-sm text-muted-foreground border-l border-border pl-2 ml-2 shrink-0">
+            <span className="hidden lg:inline-block text-sm pl-2 ml-2 shrink-0" style={{ color: "rgba(255,255,255,0.35)", borderLeft: "1px solid rgba(255,255,255,0.12)" }}>
               Cirurgia Oncológica
             </span>
           </Link>
           <nav className="flex items-center gap-4 text-sm font-medium shrink-0 ml-4">
-            <Link href="/" className="hidden md:block transition-colors hover:text-primary">Início</Link>
-            <Link href="/agendar" data-testid="link-agendar-nav" className="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
+            <Link href="/" className="hidden md:block transition-colors" style={{ color: "rgba(255,255,255,0.55)" }}>Início</Link>
+            <Link
+              href="/agendar"
+              data-testid="link-agendar-nav"
+              className="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-semibold shadow transition-all focus-visible:outline-none"
+              style={{ background: "linear-gradient(135deg, #b8935a, #d4aa72)", color: "#0a0f0d" }}
+            >
               Agendar Consulta
             </Link>
           </nav>
